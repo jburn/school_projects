@@ -265,7 +265,6 @@ def addsquared():
             states["hiddenline"] = str(squared)
             calcline.set(squared)
             states["numbers"][0] = str(squared)
-            states["numbers"][1] = str(squared)
             if states["numbers"][states["moves"]].find(".") == -1:
                 states["dot"] = 0
             states["finished"] = 1
