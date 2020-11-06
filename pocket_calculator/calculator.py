@@ -1,17 +1,33 @@
+"""
+A simple calculator with a graphical interface.
+Made just for fun and to test out tkinter and ttk
+
+Author: Juho Bruun
+Date: 04.05.2020
+
+"""
+
 from tkinter import *
 from tkinter import ttk
 import operator as op
 
 """
-the program alters between different states using this dictionary
-hiddenline is the string that is used to edit the calcline variable that is visible to the user
-moves is used to ensure that the user only uses a single operand in the calculation
-operand is used to set the operand to use for calculate function
-numbers are used to set the variables for the calculate function
-finished state is reached after pressing calculate or in an overflowerror situation
+The program alters between different states using this dictionary.
+
+
+hiddenline: The string that is used to edit the calcline variable that is visible to the user.
+
+moves: Used to ensure that the user only uses a single operand at a time in the calculation.
+
+operand: Used to set the operand to use for calculate function.
+
+numbers: Used to set the variables for each side of the operand, and for the calculate function to use.
+
+finished: This state is reached after pressing calculate or in an overflowerror situation.
     '1' is soft finished (clear or an operand breaks this state)
     '2' is hard finished (only clear breaks this state)
-dot state is used to ensure that the user cannot use more than one dot on a single variable
+
+dot: Used to ensure that the user cannot use more than one dot on a single variable.
 """
 
 states = {
@@ -23,12 +39,12 @@ states = {
 "dot": 0
 }
 
-"""
-this function calculates the two given variables using the current operand state
-used by the '=' button
-"""
 
 def calculate():
+    """
+    This function calculates the two given variables using the current operand state.
+    Used by the '=' button.
+    """
     if states["finished"] != 2:    
         try:
             if states["operand"] == "plus":
@@ -59,12 +75,13 @@ def calculate():
             calcline.set("Result too large, press clear")
             states["finished"] = 2
 
-"""
-this function clears the the visible text on the screen and resets all the states to default.
-used by the 'clear' button
-"""
+
 
 def clear():
+    """
+    This function clears the the visible text on the screen and resets all the states to default.
+    Used by the 'clear' button.
+    """
     states["finished"] = 0
     states["moves"] = 0
     states["hiddenline"] = " "
@@ -73,9 +90,10 @@ def clear():
     states["dot"] = 0
     calcline.set(states["hiddenline"])
 
+
 """
-the following functions are used by all the different buttons in the interface 
-to alter the states as needed and to put the variables and operands on the calcline
+The following functions are used by all the different buttons in the interface 
+to alter the states as needed, and to put the variables and operands on the calcline.
 """
 
 def addone():
@@ -284,7 +302,7 @@ def addpoint():
 
 
 """
-Configuring the interface, grid and different elements of the interface
+Configuring the interface, grid and different elements of the interface.
 """
 root = Tk()
 root.title("Calculator")
@@ -319,24 +337,5 @@ ttk.Button(mainframe, text=".", command=addpoint).grid(column=1, row=5, sticky=(
 ttk.Button(mainframe, text="0", command=addzero).grid(column=2, row=5, sticky=(N, W, S, E))
 ttk.Button(mainframe, text="=", command=calculate).grid(column=3, row=5, sticky=(N, W, S, E))
 ttk.Button(mainframe, text="clear", command=clear).grid(column=5, row=5, sticky=(N, W, S, E))
-
-"""scrapped keyboard support"""
-#root.bind('<Return>', calculate)
-#root.bind('1', addone)
-#root.bind('2', addtwo)
-#root.bind('3', addthree)
-#root.bind('4', addfour)
-#root.bind('5', addfive)
-#root.bind('6', addsix)
-#root.bind('7', addseven)
-#root.bind('8', addeight)
-#root.bind('9', addnine)
-#root.bind('0', addzero)
-#root.bind('.', addpoint)
-#root.bind('+', addplus)
-#root.bind('-', addminus)
-#root.bind('*', addmultiply)
-#root.bind('/', adddivide)
-#root.bind('<BackSpace>', clear)
 
 root.mainloop()
