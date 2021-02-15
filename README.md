@@ -1,5 +1,5 @@
 # school_projects
-*Coursework projects and code from university courses*
+*Projects and code from university courses*
 
 **computer_systems:** Turned a TI Sensortag device into a game controller that uses gyro to detect motion and sends appropriate messages to screen and the game. Also plays music.
                   Folder includes the Y86-assembly exercise, which is basically a pseudo random number generator using the middle square -method.
