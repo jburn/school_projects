@@ -1,3 +1,5 @@
+import time
+
 # defining the graph object
 class Graph:
     def __init__(self, vertex_amount):
@@ -104,19 +106,19 @@ def breadth_first_search(graph, startpoint, goal):
 if __name__ == "__main__":
 
     # reading the filename from user input and setting up the needed variables
-    filename = input("filename: ")
+    filename = input("Filename: ")
     content = read_file(filename)
     cityamount = content[0][0]
     roadamount = content[0][1]
     goal_city = content[-1][0] - 1
     graf = Graph(cityamount)
-
+    
     # adding the edges given in the file to the graph
     for n in range(1,  roadamount+1):
         graf.add_edge(content[n][0]-1, content[n][1]-1, content[n][2])
 
     mst_list = graf.kruskal() # getting the minimum search tree of the graph by applying kruskal's algorithm
-    
+
     # making the minimum search tree into dictionary form for the breadth search function
     min_search_tree = {} 
     for n in range(len(mst_list)):
