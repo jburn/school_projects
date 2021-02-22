@@ -1,5 +1,3 @@
-import time
-
 # defining the graph object
 class Graph:
     def __init__(self, vertex_amount):
