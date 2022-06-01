@@ -11,3 +11,7 @@
 **programming_1:** Included the course assignment and a simple member registry database made while learning to use structs.
                   ATM simulator reads account number from filename and PIN code from corresponding file.
                   Also reads and writes balance and account events from/into text files "bal.txt" and "events.txt".
+
+**programming_2:** Codes for all of the course assignments. Course was about the basics of Object Oriented Programming
+
+**programming_4:** Simple python GUI-application for file and string encryption. Made in collaboration with another student.
