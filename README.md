@@ -1,6 +1,8 @@
 # school_projects
 *Projects and code from university courses*
 
+**software_project:** Developed a non-secure android app for security testing and education for the university. Link to repo: https://github.com/Mikkeep/namaste
+
 **computer_systems:** Turned a TI Sensortag device into a game controller that uses gyro to detect motion and sends appropriate messages to screen and the game. Also plays music.
                   Folder includes the Y86-assembly exercise, which is basically a pseudo random number generator using the middle square -method.
                   
