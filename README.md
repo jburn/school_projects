@@ -7,6 +7,8 @@
 
 **computer_systems:** Turned a TI Sensortag device into a game controller that uses gyro to detect motion and sends appropriate messages to screen and the game. Also plays music.
                   Folder includes the Y86-assembly exercise, which is basically a pseudo random number generator using the middle square -method.
+
+**cryptographic_systems:** Course about cryptographic systems and their weaknessess. Includes a python script used to crack text encrypted with the Vigenere cipher.  
                   
 **data_structures_and_algorithms:** Course assignment for DSA using python. It implements a Graph data structure and applies Kruskal's algorithm and BFS to find the path with the lowest maximum weight in a given graph.
 
