@@ -18,4 +18,6 @@
 
 **programming_2:** Course assignments for the course about the basics of Object Oriented Programming using Java.
 
+**programming_3:** Course assignment for the course about HTTPS server programming. Implemented using Java.
+
 **programming_4:** Simple python GUI-application for file and string encryption using PyQT5. Made in collaboration with another student.
